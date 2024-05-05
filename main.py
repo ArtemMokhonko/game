@@ -38,7 +38,7 @@ player_flipped = False
 
 
 def create_enemy(): 
-    enemy= pygame.transform.scale(pygame.image.load('enemy.png').convert_alpha(), (300, 40))    #enemy = pygame.Surface(enemy_size)
+    enemy= pygame.transform.scale(pygame.image.load('enemy.png').convert_alpha(), (100, 40))    #enemy = pygame.Surface(enemy_size)
     enemy_rect = pygame.Rect(WIDTH, random.randint(0, 750), *enemy.get_size())
     enemy_move = [random.randint(-12, -4), 0]
     return [enemy, enemy_rect, enemy_move]
@@ -53,7 +53,7 @@ def create_bonus():
 
 
 CREATE_ENEMY = pygame.USEREVENT +1
-pygame.time.set_timer(CREATE_ENEMY, 900)
+pygame.time.set_timer(CREATE_ENEMY, 600)
 
 CREATE_BONUS = pygame.USEREVENT +2
 pygame.time.set_timer(CREATE_BONUS, 3000)
